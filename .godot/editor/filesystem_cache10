@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1755705730
+::res://::1755706002
 icon.svg::CompressedTexture2D/CompressedTexture2D::1421258925197840083::1755702614::1755703670::1::::<><><>0<>0<>673c1f5c388154f0bfc8664d9b02fafb<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile/TextFile::-1::1755703568::0::1::::<><><>0<>0<><>::
 Test.tscn::PackedScene/PackedScene::-1::1755703716::0::1::::<><><>0<>0<><>::
@@ -17,11 +17,11 @@ utils.gd::GDScript/GDScript::5251015809120159908::1755703716::0::1::::<>RefCount
 ::res://assets/art/::1755705324
 Assets.png::CompressedTexture2D/CompressedTexture2D::5055847736142813721::1755703965::1755703966::1::::<><><>0<>0<>faa8ea000c0ddc37d432d992565de1a5<>res://.godot/imported/Assets.png-9010300a4886cc5052429c61aca9c2b9.ctex::
 Walk.png::CompressedTexture2D/CompressedTexture2D::6068146077569900814::1755705323::1755705324::1::::<><><>0<>0<>50965d6d554665554debb3463ea911cc<>res://.godot/imported/Walk.png-da0fffeb5b0485e6329db7618120ca45.ctex::
-::res://assets/scenes/::1755705682
-map.tscn::PackedScene::4695033948525730785::1755705682::0::1::::<><><>0<>0<><>::uid://cebdcravy4eht::::res://assets/art/Assets.png<>uid://dcxagx03bxjlr::::res://assets/scenes/player.tscn
-player.tscn::PackedScene::7347132389393778867::1755705682::0::1::::<><><>0<>0<><>::uid://hp6o5x5pkxxu::::res://assets/scripts/player.gd<>uid://csppqkdungk2q::::res://assets/art/Walk.png
-::res://assets/scripts/::1755705653
-player.gd::GDScript::524196412282086334::1755705653::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://assets/scenes/::1755705899
+map.tscn::PackedScene::4695033948525730785::1755705899::0::1::::<><><>0<>0<><>::uid://cebdcravy4eht::::res://assets/art/Assets.png<>uid://dcxagx03bxjlr::::res://assets/scenes/player.tscn
+player.tscn::PackedScene::7347132389393778867::1755705810::0::1::::<><><>0<>0<><>::uid://hp6o5x5pkxxu::::res://assets/scripts/player.gd<>uid://csppqkdungk2q::::res://assets/art/Walk.png
+::res://assets/scripts/::1755705778
+player.gd::GDScript::524196412282086334::1755705778::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ::res://images/::1755703717
 godotwaka2.png::CompressedTexture2D/CompressedTexture2D::7026850610005011835::1755703716::1755703717::1::::<><><>0<>0<>810b540a66b6e3b66a13986e88af977c<>res://.godot/imported/godotwaka2.png-7d3d010fb4adc0d433467ab1cc4754ed.ctex::
 godotwaka.png::CompressedTexture2D/CompressedTexture2D::7932361111412089001::1755703716::1755703717::1::::<><><>0<>0<>b1dc139e8838b61e9cb033db1ca4f185<>res://.godot/imported/godotwaka.png-ef0518417b4f997d237759e5551dd05d.ctex::

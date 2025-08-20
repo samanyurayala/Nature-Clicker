@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=4 uid="uid://b75kr12bfuwur"]
+[gd_scene load_steps=6 format=4 uid="uid://b75kr12bfuwur"]
 
 [ext_resource type="Texture2D" uid="uid://cebdcravy4eht" path="res://assets/art/Assets.png" id="1_bnucp"]
+[ext_resource type="Script" uid="uid://fmat4ewtyweg" path="res://assets/scripts/map.gd" id="1_fyu4c"]
 [ext_resource type="PackedScene" uid="uid://dcxagx03bxjlr" path="res://assets/scenes/player.tscn" id="2_45j4w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_45j4w"]
@@ -407,6 +408,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_45j4w")
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_fyu4c")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAABAAgAAAADAAAAAAACAAgAAAADAAAAAAADAAgAAAADAAAAAAAEAAgAAAADAAAAAAAFAAgAAAADAAAAAAAGAAgAAAADAAAAAAAHAAgAAAADAAAAAAAIAAgAAAADAAAAAAAJAAgAAAADAAAAAAAKAAgAAAADAAAAAAALAAgAAAADAAAAAAAMAAgAAAADAAAAAAANAAgAAAADAAAAAAAOAAgAAAADAAAAAAAPAAgAAAADAAAAAAAQAAgAAAADAAAAAAARAAgAAAADAAAAAAASAAgAAAADAAAAAAATAAgAAAADAAAAAAAUAAgAAAADAAAAAAAVAAgAAAADAAAAAAAWAAgAAAADAAAAAAAXAAgAAAADAAAAAAAYAAgAAAADAAAAAAAZAAgAAAADAAAAAAAaAAgAAAADAAAAAAAbAAgAAAADAAAAAAAAAAgAAAACAAAAAAAcAAgAAAAGAAIAAAAcAAcAAAAGAAEAAAAdAAcAAAAHAAEAAAAdAAYAAAAHAAAAAAAeAAcAAAAIAAEAAAAeAAYAAAAIAAAAAAAfAAcAAAAJAAEAAAAfAAYAAAAJAAAAAAAgAAcAAAAKAAEAAAAgAAYAAAAKAAAAAAAhAAcAAAALAAEAAAAhAAYAAAALAAAAAAAiAAcAAAAMAAEAAAAiAAgAAAAMAAIAAAAdAAgAAAADAAEAAAAeAAgAAAADAAEAAAAfAAgAAAADAAEAAAAgAAgAAAADAAEAAAAhAAgAAAADAAEAAAA=")
@@ -420,3 +422,11 @@ offset_left = 500.0
 offset_top = 87.0
 offset_right = 508.0
 offset_bottom = 95.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 485.0
+offset_top = 56.0
+offset_right = 525.0
+offset_bottom = 79.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
