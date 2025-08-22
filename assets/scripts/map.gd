@@ -37,7 +37,7 @@ func _physics_process(delta):
 	player.jump_velocity = -250 - 0.25 * jump_boosts
 	# Handle sprint. 
 	if Input.is_action_pressed("Sprint"):
-		player.speed = (50.0 + 0.1 * speed_boosts) * 10
+		player.speed = (50.0 + 0.1 * speed_boosts) * 2
 	else:
 		player.speed = 50.0 + 0.1 * speed_boosts
 	

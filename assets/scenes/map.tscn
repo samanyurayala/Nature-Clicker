@@ -805,6 +805,7 @@ offset_left = 500.0
 offset_top = 87.0
 offset_right = 508.0
 offset_bottom = 95.0
+focus_mode = 0
 
 [node name="Labels" type="Node2D" parent="."]
 
