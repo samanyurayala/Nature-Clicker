@@ -1,4 +1,3 @@
 res://assets/scenes/map.tscn
-res://assets/scripts/player.gd
-res://assets/scripts/map.gd
 res://assets/scenes/player.tscn
+res://assets/scripts/map.gd
