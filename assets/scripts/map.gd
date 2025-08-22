@@ -25,18 +25,18 @@ func _process(delta):
 	label_3.text = "Clicker \n Helper \n (B) to buy \n Price: " + str(clicker_price)
 	label_5.text = "Click \n Multiplier \n (E) to buy \n Price: " + str(clicks_multiplier_price)
 	clicks += 0.0001 * clicker_helpers
-	if player.position.x > 3704:
+	if player.position.x > 3704 and player.position.y <= -290 and player.position.x <= 3775:
 		player.position = Vector2(216, 117.9969)
 	if player.position.y >= 140:
 		player.position = Vector2(216, 117.9969)
 		clicks = 0
-	# print(player.global_transform.origin)
+	print(player.global_transform.origin)
 
 func _physics_process(delta):
 	player.jump_velocity = -250 - 0.25 * jump_boosts
 	# Handle sprint. 
 	if Input.is_action_pressed("Sprint"):
-		player.speed = (50.0 + 0.1 * speed_boosts) * 10
+		player.speed = (50.0 + 0.1 * speed_boosts) * 2
 	else:
 		player.speed = 50.0 + 0.1 * speed_boosts
 	
