@@ -25,11 +25,10 @@ func _process(delta):
 	label_5.text = "Click \n Multiplier \n (E) to buy \n Price: " + str(clicks_multiplier_price)
 	clicks += 0.0001 * clicker_helpers
 	if player.position.x > 4000:
-		player.position.x = 216
-		player.position.y = 117.9969
-	# print(clicker_helpers)
-	# print(clicks_multipliers)
-	# print(speed_boosts)
+		player.position = Vector2(216, 117.9969)
+	if player.position.y >= 140:
+		player.position = Vector2(216, 117.9969)
+		clicks = 0
 
 func _physics_process(delta):
 	player.jump_velocity = -250 - 0.25 * jump_boosts
