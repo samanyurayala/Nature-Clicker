@@ -45,3 +45,5 @@ func _animations():
 		player_anim.play("jump")
 	if velocity.x == 0 and velocity.y != 0:
 		player_anim.play("jump")
+
+		

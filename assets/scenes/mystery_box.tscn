@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuqgknoy7pof5"]
+
+[ext_resource type="Texture2D" uid="uid://bw4l3hwu43gh6" path="res://assets/art/mystery_box.png" id="1_sok4v"]
+[ext_resource type="Script" uid="uid://bvelgr7n3xc3f" path="res://assets/scripts/mystery_box.gd" id="2_ojp8r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ojp8r"]
+size = Vector2(16, 16)
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_sok4v")
+script = ExtResource("2_ojp8r")
+
+[node name="Area2D" type="Area2D" parent="." groups=["mystery_box"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ojp8r")

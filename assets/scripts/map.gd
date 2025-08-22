@@ -12,6 +12,7 @@ var clicks_multipliers = 0
 var clicks_multiplier_price = 20
 var speed_boosts = 0
 var jump_boosts = 0
+var random = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,11 +25,12 @@ func _process(delta):
 	label_3.text = "Clicker \n Helper \n (B) to buy \n Price: " + str(clicker_price)
 	label_5.text = "Click \n Multiplier \n (E) to buy \n Price: " + str(clicks_multiplier_price)
 	clicks += 0.0001 * clicker_helpers
-	if player.position.x > 4000:
+	if player.position.x > 3704:
 		player.position = Vector2(216, 117.9969)
 	if player.position.y >= 140:
 		player.position = Vector2(216, 117.9969)
 		clicks = 0
+	# print(player.global_transform.origin)
 
 func _physics_process(delta):
 	player.jump_velocity = -250 - 0.25 * jump_boosts
@@ -56,3 +58,14 @@ func _physics_process(delta):
 
 func _on_button_pressed():
 	clicks += 1 + 1 * clicks_multipliers
+
+
+func _on_area_2d_area_entered(area):
+	if area.is_in_group("mystery_box"):
+		random = randi_range(1, 2)
+		if random == 2:
+			player.position = Vector2(216, 117.9969)
+			clicks = 0
+		else:
+			random = randi_range(50, 100)
+			clicks += random

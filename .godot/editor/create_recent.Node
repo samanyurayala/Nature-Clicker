@@ -1,3 +1,6 @@
+Area2D
+CollisionShape2D
+Sprite2D
 CanvasLayer
 Node2D
 TileMapLayer
@@ -6,6 +9,4 @@ AnimatedSprite2D
 Button
 Camera2D
 MeshInstance2D
-CollisionShape2D
-Sprite2D
 CharacterBody2D

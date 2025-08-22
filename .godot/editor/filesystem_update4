@@ -1,4 +1,6 @@
 res://assets/scenes/map.tscn
 res://assets/scenes/player.tscn
-res://assets/scripts/map.gd
+res://assets/scenes/mystery_box.tscn
+res://assets/scripts/mystery_box.gd
 res://assets/scripts/player.gd
+res://assets/scripts/map.gd
