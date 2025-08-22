@@ -9,6 +9,7 @@ var clicker_price = 15
 var clicks_multipliers = 0
 var clicks_multiplier_price = 20
 var speed_boosts = 0
+var jump_boosts = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,6 +28,7 @@ func _process(delta):
 	# print(speed_boosts)
 
 func _physics_process(delta):
+	player.jump_velocity = -250 - 0.25 * jump_boosts
 	# Handle sprint. 
 	if Input.is_action_pressed("Sprint"):
 		player.speed = (50.0 + 0.1 * speed_boosts) * 2
@@ -43,6 +45,9 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("Shop3") and clicks >= clicks_multiplier_price:
 			clicks_multipliers += 1;
 			clicks -= clicks_multiplier_price
+		if Input.is_action_just_pressed("Shop4") and clicks >= 10:
+			jump_boosts += 1;
+			clicks -= 10;
 
 func _on_button_pressed():
 	clicks += 1 + 1 * clicks_multipliers
