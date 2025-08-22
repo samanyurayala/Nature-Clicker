@@ -885,11 +885,17 @@ shape = SubResource("CapsuleShape2D_07t7k")
 [node name="Sprite2D" parent="." instance=ExtResource("5_tir77")]
 position = Vector2(3525, -300)
 
+[node name="Sprite2D5" parent="." instance=ExtResource("5_tir77")]
+position = Vector2(902, 116)
+
 [node name="Sprite2D2" parent="." instance=ExtResource("6_jroha")]
 position = Vector2(9770, -1474)
 
 [node name="Sprite2D3" parent="." instance=ExtResource("7_lphgc")]
-position = Vector2(3207, -323)
+position = Vector2(3207, -301)
+
+[node name="Sprite2D4" parent="." instance=ExtResource("7_lphgc")]
+position = Vector2(2289, -79)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_g2dpn")
