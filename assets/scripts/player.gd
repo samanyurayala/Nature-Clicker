@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var player_anim = $AnimatedSprite2D
+@onready var footsteps = $AudioStreamPlayer2D
 
 var speed = 50.0
 var jump_velocity = -250.0
@@ -21,6 +22,7 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction * speed
 	else:
+		footsteps.play()
 		velocity.x = move_toward(velocity.x, 0, speed)
 
 	move_and_slide()

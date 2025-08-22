@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://dcxagx03bxjlr"]
+[gd_scene load_steps=19 format=3 uid="uid://dcxagx03bxjlr"]
 
 [ext_resource type="Script" uid="uid://hp6o5x5pkxxu" path="res://assets/scripts/player.gd" id="1_rwm0n"]
 [ext_resource type="Texture2D" uid="uid://csppqkdungk2q" path="res://assets/art/Walk.png" id="2_s027a"]
+[ext_resource type="AudioStream" uid="uid://cg4ifia7ig15v" path="res://sounds/footsteps.mp3" id="3_14505"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ysycn"]
 radius = 8.0
@@ -128,3 +129,7 @@ zoom = Vector2(7.5, 7.5)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tc801")
 animation = &"jump"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_14505")
+volume_db = -20.0

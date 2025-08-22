@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://co5nrcsqejkc"]
+
+[ext_resource type="Texture2D" uid="uid://8vdo6dyw0k2i" path="res://assets/art/othermysterybox.png" id="1_1umh3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ojp8r"]
+size = Vector2(16, 16)
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_1umh3")
+
+[node name="Area2D" type="Area2D" parent="." groups=["other_mystery_box"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ojp8r")

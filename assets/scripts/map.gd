@@ -4,6 +4,7 @@ extends Node2D
 @onready var player = $CharacterBody2D
 @onready var label_3 = $Labels/Label3
 @onready var label_5 = $Labels/Label5
+@onready var click_sound = $AudioStreamPlayer2D
 
 var clicks = 0
 var clicker_helpers = 0
@@ -25,7 +26,7 @@ func _process(delta):
 	label_3.text = "Clicker \n Helper \n (B) to buy \n Price: " + str(clicker_price)
 	label_5.text = "Click \n Multiplier \n (E) to buy \n Price: " + str(clicks_multiplier_price)
 	clicks += 0.0001 * clicker_helpers
-	if player.position.x > 3704 and player.position.y <= -290 and player.position.x <= 3775:
+	if player.position.x >= 3704 and player.position.y <= -290 and player.position.x <= 3775:
 		player.position = Vector2(216, 117.9969)
 	if player.position.y >= 140:
 		player.position = Vector2(216, 117.9969)
@@ -36,7 +37,7 @@ func _physics_process(delta):
 	player.jump_velocity = -250 - 0.25 * jump_boosts
 	# Handle sprint. 
 	if Input.is_action_pressed("Sprint"):
-		player.speed = (50.0 + 0.1 * speed_boosts) * 2
+		player.speed = (50.0 + 0.1 * speed_boosts) * 10
 	else:
 		player.speed = 50.0 + 0.1 * speed_boosts
 	
@@ -56,8 +57,12 @@ func _physics_process(delta):
 			jump_boosts += 1;
 			clicks -= 10;
 
+	if player.position.x >= 9620 and player.position.x <= 9930 and Input.is_action_just_pressed("gobacktospawn"):
+		player.position = Vector2(216, 117.9969)
+		
 func _on_button_pressed():
 	clicks += 1 + 1 * clicks_multipliers
+	click_sound.play()
 
 
 func _on_area_2d_area_entered(area):
@@ -68,4 +73,18 @@ func _on_area_2d_area_entered(area):
 			clicks = 0
 		else:
 			random = randi_range(50, 100)
+			clicks += random
+	if area.is_in_group("lotofclicks"):
+		clicks += 1000000000000000000
+		area.queue_free()
+	if area.is_in_group("other_mystery_box"):
+		random = randi_range(1, 2)
+		if random == 1:
+			player.position = Vector2(216, 117.9969)
+			clicks = 0
+			clicker_helpers = 0
+			clicks_multipliers = 0
+			clicker_price = 15
+		else:
+			random = randi_range(5000, 10000)
 			clicks += random
