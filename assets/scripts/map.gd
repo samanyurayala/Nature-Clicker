@@ -31,7 +31,7 @@ func _process(delta):
 	if player.position.y >= 140:
 		player.position = Vector2(216, 117.9969)
 		clicks = 0
-	print(player.global_transform.origin)
+	# print(player.global_transform.origin)
 
 func _physics_process(delta):
 	player.jump_velocity = -250 - 0.25 * jump_boosts

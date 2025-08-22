@@ -5,3 +5,5 @@ res://assets/scripts/map.gd
 res://assets/scenes/lotofclicks.tscn
 res://assets/scenes/othermysterybox.tscn
 res://assets/scripts/player.gd
+res://assets/scenes/mainmenu.tscn
+res://assets/scripts/mainmenu.gd

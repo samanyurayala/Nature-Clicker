@@ -10,7 +10,7 @@ height = 20.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_00pic"]
 atlas = ExtResource("2_s027a")
-region = Rect2(96, 64, 32, 32)
+region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s027a"]
 atlas = ExtResource("2_s027a")
@@ -67,7 +67,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_00pic")
 }],
 "loop": true,
-"name": &"jump",
+"name": &"new_animation",
 "speed": 5.0
 }, {
 "frames": [{
@@ -128,7 +128,7 @@ zoom = Vector2(7.5, 7.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tc801")
-animation = &"jump"
+animation = &"new_animation"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_14505")
